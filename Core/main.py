@@ -38,7 +38,7 @@ def do_time(bot: Bot, update: Update):
     process = Popen(["date"], stdout=PIPE)
     text, error = process.communicate()
     if error:
-        text = "У меня тут ошибочка, надо что то сделать"
+        text = "У меня тут ошибочка, надо что-то сделать"
     else:
         text = text.decode("utf-8")
     bot.send_message(
