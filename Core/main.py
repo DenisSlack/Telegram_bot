@@ -8,8 +8,7 @@ from telegram.ext import Filters
 from subprocess import Popen
 from subprocess import PIPE
 
-from Core.config import TG_TOKEN
-from Core.config import TG_API_URL
+from Core.config import load_config
 
 
 def do_start(bot: Bot, update: Update):
@@ -58,9 +57,10 @@ def do_echo(bot: Bot, update: Update):
 
 
 def main():
+    config= load_config()
     bot = Bot(
-        token=TG_TOKEN,
-        base_url=TG_API_URL,
+        token=config.TG_TOKEN,
+        base_url=config.TG_API_URL,
     )
     updater = Updater(
         bot=bot,
