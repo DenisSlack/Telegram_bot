@@ -8,7 +8,7 @@ Environment="TG_CONF=production"
 Type=simple
 User=root
 WorkingDirectory=/home/den/Telegram_bot
-ExecStart=/usr/bin/python3 /home/den/Telegram_bot/Core/main.py
+ExecStart=/usr/bin/python3.6 /home/den/Telegram_bot/Core/main.py
 RestartSec=10
 Restart=always
 
